@@ -35,7 +35,6 @@ export default class TodoNewItemRow extends Vue {
 
   private overrideRating: RatingLevel = RatingLevel.INFO;
 
-  @Emit('submitted')
   createItem(): TodoItem {
     const newItem : TodoItem = { ...this.todoItem };
     newItem.id = this.id;
@@ -49,7 +48,12 @@ export default class TodoNewItemRow extends Vue {
 
     this.overrideRating = RatingLevel.INFO;
 
-    return newItem;
+    return this.submitEvent(newItem);
+  }
+
+  @Emit('submitted')
+  submitEvent(newItem: TodoItem): TodoItem {
+    return this.newItem;
   }
 }
 </script>

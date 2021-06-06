@@ -2,8 +2,8 @@
     <div>
         <p>{{counter}}</p>
 
-        <button class="btn btn-primary me-3" @click="decrement">Decrement</button>
-        <button class="btn btn-primary ms-3" @click="increment">Increment</button>
+        <button id="decrement" class="btn btn-primary me-3" @click="decrement">Decrement</button>
+        <button id="increment" class="btn btn-primary ms-3" @click="increment">Increment</button>
     </div>
 </template>
 

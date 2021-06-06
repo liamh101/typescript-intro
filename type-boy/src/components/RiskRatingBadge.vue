@@ -1,17 +1,13 @@
 <template>
-  <div class="hello">
-    <span class="badge" :class="getBadgeClass">{{ getRatingName }}</span>
-  </div>
+  <span class="badge" :class="getBadgeClass">{{ getRatingName }}</span>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Mixins } from 'vue-property-decorator';
+import { Component, Mixins } from 'vue-property-decorator';
 import { RiskRating, RatingLevel } from '../mixins/RiskRating';
 
 @Component
 export default class RiskRatingBadge extends Mixins(RiskRating) {
-  @Prop() private badge!: boolean;
-
   get getBadgeClass(): string {
     switch (this.rating) {
       case RatingLevel.INFO:

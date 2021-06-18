@@ -1,4 +1,6 @@
-# type-boy
+# typescript-intro
+
+This project is just a learning exercise for myself to experiment with typescript with Vue2.
 
 ## Project setup
 ```

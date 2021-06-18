@@ -43,13 +43,13 @@ export default class App extends Vue {
   private todoItems : TodoItem[] = [
     {
       id: 1,
-      name: 'Finish this List',
+      name: 'Finish first part of talk',
       riskRating: 0,
       completed: false,
     },
     {
       id: 2,
-      name: 'Add Styling',
+      name: 'Demo this todo list',
       riskRating: RatingLevel.HIGH,
       completed: false,
     },
